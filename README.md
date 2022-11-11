@@ -1,4 +1,4 @@
-# Task Assign Tool
+# Task Assignment Tool
 This tool is implemented by Genetic Algorithm. You can use it for Job Scheduling Problem or Assignment Problem.
 
 ## Usage
