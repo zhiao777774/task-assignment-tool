@@ -4,7 +4,7 @@ This tool is implemented by Genetic Algorithm. You can use it for Job Scheduling
 ## Usage
 
 Input format: Columns and rows represent people and jobs, respectively. every cell is the prioritisation score for this
-job (score is 0 to n-1). If a number is closer to "n" indicates they more want the task.
+job (score can be 0 to n-1 or 1 to n). If a number is closer to "n" indicates they more want the task.
 
 ```
 task1, task2, task3 ...
@@ -29,13 +29,13 @@ Optional arguments:
 | -p --p-size |      50      | population size                           |
 | -c --c-rate |     0.2      | crossover rate                            |
 | -m --m-rate |     0.1      | mutation rate                             |
-| -n --n-iter |     1000     | number of iterations                      |
+| -n --n-iter |     1000     | number of iterations (generations)        |
 
 Output example (csv format)
 
 ```
-n1,n2,n3,n4,n5,n6,n7,n8,n9,n10
-t2,t1,t1,t4,t3,t5,t4,t2,t5,t3
+n1,n2,n3,n4,n5,n6,n7,n8,n9,n10 <- the header row is task names
+t2,t1,t1,t4,t3,t5,t4,t2,t5,t3 <- each row shows the calculation results for each generation
 t2,t4,t1,t3,t3,t5,t1,t4,t5,t2
 ... (skip many iteration)
 t3,t1,t4,t4,t3,t5,t2,t1,t5,t2
@@ -46,7 +46,7 @@ t2,t4,t4,t3,t3,t5,t1,t1,t5,t2
 t2,t4,t4,t3,t3,t5,t1,t1,t5,t2
 t2,t4,t4,t3,t3,t5,t1,t1,t5,t2
 t2,t4,t4,t3,t3,t5,t1,t1,t5,t2
-t2,t4,t4,t3,t3,t5,t1,t1,t5,t2 <- the last iteration is optimal solution
+t2,t4,t4,t3,t3,t5,t1,t1,t5,t2 <- the last generation is optimal solution
 ```
 
 #### Generating Simulation data
