@@ -49,7 +49,7 @@ t2,t4,t4,t3,t3,t5,t1,t1,t5,t2
 t2,t4,t4,t3,t3,t5,t1,t1,t5,t2 <- the last iteration is optimal solution
 ```
 
-#### **Generating Simulation data**
+#### Generating Simulation data
 
 ```
 python gen.py
@@ -79,6 +79,6 @@ t1,t2,t3,t4,t5
 4,3,1,0,2
 ```
 
-##Dependencies
+## Dependencies
 * numpy >= 1.20.3
 * pandas >= 1.3.4
