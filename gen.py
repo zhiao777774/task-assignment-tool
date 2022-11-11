@@ -4,10 +4,10 @@ import config
 from args import parse_gen_args
 
 
-def generate_simulation_data(n_task, n_item):
+def generate_simulation_data(n_tasks, n_items):
     data = []
-    for i in range(n_item):
-        scores = list(range(n_task))
+    for i in range(n_items):
+        scores = list(range(n_tasks))
         random.shuffle(scores)
 
         data.append(scores)
@@ -17,15 +17,15 @@ def generate_simulation_data(n_task, n_item):
 
 def main():
     args = parse_gen_args()
-    n_task = args.n_task
-    n_item = args.n_item
-    assert n_item >= n_task, 'number of "item" must greater than or equal to "task"'
+    n_tasks = args.n_tasks
+    n_items = args.n_items
+    assert n_items >= n_tasks, 'number of "item" must greater than or equal to "task"'
 
-    data = generate_simulation_data(n_task, n_item)
+    data = generate_simulation_data(n_tasks, n_items)
 
     with open(config.IN_DIR / args.output, 'w') as f:
         writer = csv.writer(f)
-        writer.writerow([f't{i + 1}' for i in range(n_task)])
+        writer.writerow([f't{i + 1}' for i in range(n_tasks)])
         writer.writerows(data)
 
 

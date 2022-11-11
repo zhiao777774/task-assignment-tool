@@ -48,7 +48,7 @@ def main():
                               problem.compute_obj_value)
     result = []
     solver.initialize()
-    for i in range(args.n_expr):
+    for i in range(args.n_iter):
         solver.perform_crossover_operation()
         solver.perform_mutation_operation()
         solver.evaluate_fitness()
@@ -67,7 +67,7 @@ def main():
 
     with open(config.OUT_DIR / args.output, 'w') as f:
         writer = csv.writer(f)
-        writer.writerow([f'team {i + 1}' for i in range(problem.n_items)])
+        writer.writerow([f'n{i + 1}' for i in range(problem.n_items)])
         writer.writerows(result)
 
 
