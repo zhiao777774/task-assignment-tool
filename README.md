@@ -1,5 +1,6 @@
 # Task Assign Tool
 This tool is implemented by Genetic Algorithm. You can use it for Job Scheduling Problem or Assignment Problem.
+
 ## Usage
 
 Input format: Columns and rows represent people and jobs, respectively. every cell is the prioritisation score for this
@@ -77,3 +78,7 @@ t1,t2,t3,t4,t5
 0,1,3,4,2
 4,3,1,0,2
 ```
+
+##Dependencies
+* numpy >= 1.20.3
+* pandas >= 1.3.4
