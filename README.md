@@ -4,7 +4,7 @@ This tool is implemented by Genetic Algorithm. You can use it for Job Scheduling
 ## Usage
 
 Input format: Columns and rows represent people and jobs, respectively. every cell is the prioritisation score for this
-job (score can be "0 to n-1" or "1 to n"). If a number is closer to "n" indicates they more want the task.
+job (score can be "0 to n-1" or "1 to n"). If the number is **smaller** indicates they more want the task.
 
 ```
 task1, task2, task3 ...
